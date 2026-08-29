@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Request | Bring It Back</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/track.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo-link">
+    <img src="images/logo.png" alt="Bring It Back logo" class="logo">
+    <span>Bring It <strong>Back</strong></span>
+  </a>
+  <a href="index.html" class="back-link">← Back Home</a>
+</header>
+
+<main class="track-page">
+  <section class="track-header">
+    <p class="eyebrow">TRACK YOUR ITEM</p>
+    <h1>Where is my <span>item?</span></h1>
+    <p>Enter your Bring It Back Request ID to see the current status.</p>
+  </section>
+
+  <form id="trackForm" class="track-form">
+    <label for="trackId">Request ID</label>
+    <div class="track-input-row">
+      <input id="trackId" type="text" placeholder="e.g. BIB-482193" required>
+      <button type="submit">Track →</button>
+    </div>
+  </form>
+
+  <section id="trackResult" class="track-result hidden"></section>
+</main>
+
+<script src="js/track.js"></script>
+</body>
+</html>

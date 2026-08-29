@@ -1,0 +1,175 @@
+/* Bring It Back - Tracking Page */
+
+.back-link {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.track-page {
+  width: min(850px, 92%);
+  margin: 65px auto 120px;
+}
+
+.track-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.track-header h1 {
+  color: var(--navy);
+  font-size: clamp(42px, 5vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.track-header h1 span {
+  color: var(--yellow);
+}
+
+.track-header p:last-child {
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.track-form {
+  max-width: 650px;
+  margin: auto;
+  padding: 25px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(6,36,61,.06);
+}
+
+.track-form label {
+  display: block;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.track-input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.track-input-row input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #dce3e8;
+  border-radius: 9px;
+  padding: 13px;
+  font: inherit;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.track-input-row input:focus {
+  border-color: var(--yellow);
+}
+
+.track-input-row button {
+  border: 0;
+  border-radius: 9px;
+  background: var(--navy);
+  color: var(--white);
+  padding: 0 22px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.track-result {
+  max-width: 650px;
+  margin: 25px auto 0;
+  padding: 30px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(6,36,61,.06);
+}
+
+.result-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 18px;
+}
+
+.result-top h2 {
+  color: var(--navy);
+  font-size: 20px;
+}
+
+.result-id {
+  color: var(--yellow);
+  font-weight: 800;
+}
+
+.result-item {
+  padding: 20px 0;
+}
+
+.result-item p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.result-item strong {
+  color: var(--navy);
+}
+
+.timeline {
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+}
+
+.timeline-row {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.timeline-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  margin-top: 3px;
+  background: #d6dee4;
+  flex-shrink: 0;
+}
+
+.timeline-dot.active {
+  background: var(--yellow);
+  box-shadow: 0 0 0 4px rgba(255,179,26,.15);
+}
+
+.timeline-row p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .track-page {
+    margin-top: 40px;
+  }
+
+  .track-input-row {
+    flex-direction: column;
+  }
+
+  .track-input-row button {
+    padding: 13px;
+  }
+
+  .result-top {
+    flex-direction: column;
+  }
+}

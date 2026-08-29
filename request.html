@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a Bring It Back retrieval request.">
+  <title>Retrieve My Item | Bring It Back</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/request.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo-link">
+    <img src="images/logo.png" alt="Bring It Back logo" class="logo">
+    <span>Bring It <strong>Back</strong></span>
+  </a>
+  <a href="index.html" class="back-link">← Back Home</a>
+</header>
+
+<main class="request-page">
+  <section class="request-header">
+    <p class="eyebrow">RETRIEVE YOUR ITEM</p>
+    <h1>Tell us what you <span>forgot.</span></h1>
+    <p>Give us a few details and we'll help bring it back to you.</p>
+  </section>
+
+  <div class="request-layout">
+    <form id="retrievalForm" class="request-form">
+
+      <div class="form-section">
+        <div class="section-heading">
+          <span>01</span>
+          <div>
+            <h2>Item details</h2>
+            <p>Help our delivery partner identify your item.</p>
+          </div>
+        </div>
+
+        <label for="itemName">What did you forget? <span>*</span></label>
+        <input id="itemName" name="itemName" type="text" placeholder="e.g. Black Puma pouch" required>
+
+        <label for="description">Describe the item <span>*</span></label>
+        <textarea id="description" name="description" rows="4" placeholder="Colour, brand, contents, stickers, marks, etc." required></textarea>
+
+        <label for="photo">Upload a photo <small>(optional)</small></label>
+        <label class="file-upload" for="photo">
+          <span class="upload-icon">📷</span>
+          <span>
+            <strong>Choose an item photo</strong>
+            <small id="fileName">PNG, JPG or JPEG</small>
+          </span>
+        </label>
+        <input id="photo" name="photo" type="file" accept="image/png,image/jpeg,image/jpg">
+      </div>
+
+      <div class="form-section">
+        <div class="section-heading">
+          <span>02</span>
+          <div>
+            <h2>Pickup location</h2>
+            <p>Where is your item waiting for you?</p>
+          </div>
+        </div>
+
+        <label for="placeType">Place type <span>*</span></label>
+        <select id="placeType" name="placeType" required>
+          <option value="">Select a place</option>
+          <option>Store</option>
+          <option>Restaurant</option>
+          <option>School</option>
+          <option>College</option>
+          <option>Office</option>
+          <option>Home</option>
+          <option>Other</option>
+        </select>
+
+        <label for="placeName">Place / store name <span>*</span></label>
+        <input id="placeName" name="placeName" type="text" placeholder="e.g. XYZ Store" required>
+
+        <label for="pickupLocation">Pickup address / location <span>*</span></label>
+        <input id="pickupLocation" name="pickupLocation" type="text" placeholder="Enter the complete pickup location" required>
+      </div>
+
+      <div class="form-section">
+        <div class="section-heading">
+          <span>03</span>
+          <div>
+            <h2>Delivery location</h2>
+            <p>Where should we bring your item?</p>
+          </div>
+        </div>
+
+        <label for="deliveryLocation">Your delivery address <span>*</span></label>
+        <input id="deliveryLocation" name="deliveryLocation" type="text" placeholder="Enter your current address" required>
+
+        <label for="landmark">Landmark <small>(optional)</small></label>
+        <input id="landmark" name="landmark" type="text" placeholder="e.g. Near Main Gate">
+      </div>
+
+      <div class="form-section">
+        <div class="section-heading">
+          <span>04</span>
+          <div>
+            <h2>Your contact details</h2>
+            <p>Our delivery partner may contact you about the item.</p>
+          </div>
+        </div>
+
+        <label for="customerName">Your name <span>*</span></label>
+        <input id="customerName" name="customerName" type="text" placeholder="Enter your name" required>
+
+        <label for="phone">Phone number <span>*</span></label>
+        <input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number" required>
+
+        <div class="privacy-note">
+          🔒 Your contact details are used only for this retrieval request.
+        </div>
+      </div>
+
+      <button class="submit-request" type="submit">Submit Retrieval Request →</button>
+    </form>
+
+    <aside class="request-side">
+      <div class="side-card">
+        <div class="side-icon">🔄</div>
+        <h3>How it works</h3>
+        <div class="mini-step"><b>1</b><p>You tell us about the item.</p></div>
+        <div class="mini-step"><b>2</b><p>We assign a trusted partner.</p></div>
+        <div class="mini-step"><b>3</b><p>They collect your item.</p></div>
+        <div class="mini-step"><b>4</b><p>We bring it back to you.</p></div>
+      </div>
+
+      <div class="side-tip">
+        <strong>💡 Tip</strong>
+        <p>A photo and detailed description make it easier for our partner to identify the correct item.</p>
+      </div>
+    </aside>
+  </div>
+
+  <section id="successCard" class="success-card hidden">
+    <div class="success-check">✓</div>
+    <p class="eyebrow">REQUEST CREATED</p>
+    <h2>We've got your request!</h2>
+    <p>Your retrieval request has been created. Save your Request ID to track it.</p>
+    <div class="request-number" id="requestNumber">BIB-000000</div>
+    <div class="success-actions">
+      <a href="track.html" class="primary-button">Track My Request →</a>
+      <a href="index.html" class="secondary-button">Back Home</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-brand">
+    <img src="images/logo.png" alt="Bring It Back logo">
+    <div>
+      <h3>Bring It Back</h3>
+      <p>We bring it back to you.</p>
+    </div>
+  </div>
+  <p>© <span id="year"></span> Bring It Back. All rights reserved.</p>
+</footer>
+
+<script src="js/request.js"></script>
+</body>
+</html>
